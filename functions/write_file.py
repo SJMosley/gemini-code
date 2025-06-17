@@ -1,6 +1,8 @@
 import os
 
 def write_file(working_directory, file_path, content):
+    if len(content) == 0:
+        return "Error: no content provided to write to file"
     abs_working_directory = os.path.abspath(working_directory)
     # print(abs_working_directory)
     target_file = os.path.join(abs_working_directory, file_path)
